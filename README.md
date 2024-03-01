@@ -5,6 +5,8 @@ Added SuperQ's [smokeping_prober](https://github.com/SuperQ/smokeping_prober) to
 
 This stack does 1 ping per second to configured IPv4 destinations and plots the results in a histogram and heatmap.
 
+<img width="1702" alt="image" src="https://github.com/MTN-RowinAndruscavage/smokeping-grafana/assets/8740187/4c00166d-76da-4c7e-aa7c-a5b92f5abf4c">
+
 ## Configuration & Installation
 
 You could  find and replace the CloudFlare 1.1.1.1 or Google DNS 8.8.8.8 GeoIP with something else if you like.
