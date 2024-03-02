@@ -80,7 +80,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 12,
+        "h": 16,
         "w": 14,
         "x": 0,
         "y": 0
@@ -232,7 +232,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 23,
+        "h": 31,
         "w": 2,
         "x": 21,
         "y": 0
@@ -301,7 +301,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 23,
+        "h": 31,
         "w": 1,
         "x": 23,
         "y": 0
@@ -340,6 +340,139 @@
       ],
       "title": "Errors",
       "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": null
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 14,
+        "y": 12
+      },
+      "id": 11,
+      "maxDataPoints": 100,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "colorByField": "Time",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 200
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "increase(smokeping_response_duration_seconds_count{ip=\"1.1.1.1\"}[$__interval])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "Responses",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "increase(smokeping_requests_total{ip=\"1.1.1.1\"}[$__interval])",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "Requests",
+          "useBackend": false
+        }
+      ],
+      "title": "Dropped pings 1.1.1.1",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "A",
+              "operator": "-",
+              "right": "B"
+            },
+            "mode": "reduceRow",
+            "reduce": {
+              "include": [],
+              "reducer": "diff"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
+      "type": "barchart"
     },
     {
       "datasource": {
@@ -399,10 +532,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 12,
+        "h": 16,
         "w": 14,
         "x": 0,
-        "y": 12
+        "y": 16
       },
       "id": 8,
       "options": {
@@ -461,7 +594,7 @@
         "h": 12,
         "w": 7,
         "x": 14,
-        "y": 12
+        "y": 16
       },
       "id": 6,
       "interval": "10s",
@@ -524,22 +657,155 @@
       "title": "SmokePing 8.8.8.8",
       "transformations": [],
       "type": "heatmap"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": null
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 14,
+        "y": 28
+      },
+      "id": 12,
+      "maxDataPoints": 100,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "colorByField": "Time",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 200
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "increase(smokeping_response_duration_seconds_count{ip=\"8.8.8.8\"}[$__interval])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "Responses",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "increase(smokeping_requests_total{ip=\"8.8.8.8\"}[$__interval])",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "Requests",
+          "useBackend": false
+        }
+      ],
+      "title": "Dropped pings 8.8.8.8",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "A",
+              "operator": "-",
+              "right": "B"
+            },
+            "mode": "reduceRow",
+            "reduce": {
+              "include": [],
+              "reducer": "diff"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
+      "type": "barchart"
     }
   ],
-  "refresh": "",
+  "refresh": false,
   "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "SmokePing",
   "uid": "ed8e1904-1e53-490d-9847-8bf1687bb78a",
-  "version": 11,
+  "version": 15,
   "weekStart": ""
 }
