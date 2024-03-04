@@ -10,6 +10,7 @@ services:
       - --config.file=/etc/prometheus/prometheus.yml
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-storage:/prometheus
     depends_on:
       - cadvisor
   cadvisor:
@@ -41,6 +42,8 @@ services:
     restart: unless-stopped
     ports:
       - 3000:3000
+    volumes:
+      - grafana-storage:/var/lib/grafana
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=password
     depends_on:
@@ -59,3 +62,6 @@ services:
       - 1.1.1.1
       - 8.8.8.8
     
+volumes:
+  grafana-storage:
+  prometheus-storage:

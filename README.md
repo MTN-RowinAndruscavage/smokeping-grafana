@@ -16,7 +16,7 @@ You could  find and replace the CloudFlare `1.1.1.1` or Google DNS `8.8.8.8` Geo
 You will still need to manually set up the prometheus data source in grafana at [localhost:3000](http://localhost:3000/) 
 Go to Connections and add a prometheus data source at `http://prometheus:9090`
 
-Your prometheus will have a randomly-generated uid, so you'll want to find and replace that into all instances of `"uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"` in the `grafana_smokeping_dashboard.json` file.
+Your prometheus will have a randomly-generated uid, so you'll want to find and replace that into all instances of `"uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"` in the `grafana_smokeping_dashboard.json` file before importing the dashboard.
 Then you'll need to load that into Dashboards | New | Import Dashboard .
 
 
