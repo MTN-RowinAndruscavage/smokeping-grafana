@@ -43,8 +43,9 @@ services:
       - 3000:3000
     volumes:
       - grafana-storage:/var/lib/grafana
+      - ./provisioning/datasources:/etc/grafana/provisioning/datasources:ro
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=password
+      - GF_SECURITY_ADMIN_PASSWORD=${GF_ADMIN_PASSWORD:-password}
     depends_on:
       - prometheus
       - cadvisor
@@ -55,12 +56,28 @@ services:
     restart: unless-stopped
     ports:
       - 9374:9374
+    entrypoint: ["sh", "-c"]
     command:
-      - --privileged
-      - --ping.interval=0.2s
-      - --buckets=0.005,0.01,0.015,0.02,0.025,0.03,0.035,0.04,0.045,0.05,0.055,0.06,0.065,0.07,0.075,0.08,0.085,0.09,0.095,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,1.0
-      - 1.1.1.1
-      - 8.8.8.8
+      - >-
+        smokeping_prober
+        --privileged
+        --ping.interval=${PING_INTERVAL:-0.2s}
+        --buckets=0.005,0.01,0.015,0.02,0.025,0.03,0.035,0.04,0.045,0.05,0.055,0.06,0.065,0.07,0.075,0.08,0.085,0.09,0.095,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,1.0
+        ${TARGETS:-1.1.1.1 8.8.8.8}
+
+  setup:
+    profiles: ["setup"]
+    build:
+      context: .
+      dockerfile: Dockerfile.setup
+    volumes:
+      - .:/work
+    environment:
+      - TARGETS=${TARGETS:-1.1.1.1 8.8.8.8}
+      - GRAFANA_URL=http://grafana:3000
+      - GRAFANA_PASSWORD=${GF_ADMIN_PASSWORD:-password}
+    depends_on:
+      - grafana
 
 volumes:
   grafana-storage:

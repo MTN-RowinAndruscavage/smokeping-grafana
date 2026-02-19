@@ -18,14 +18,13 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+        "uid": "smokeping-prometheus"
       },
       "description": "1.1.1.1",
       "fieldConfig": {
@@ -85,7 +84,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 5,
+      "id": 1,
       "options": {
         "bucketOffset": 0,
         "combine": false,
@@ -101,7 +100,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+            "uid": "smokeping-prometheus"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -119,7 +118,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+        "uid": "smokeping-prometheus"
       },
       "description": "1.1.1.1",
       "fieldConfig": {
@@ -163,7 +162,7 @@
           "color": "rgba(255,0,255,0.7)"
         },
         "filterValues": {
-          "le": 1e-9
+          "le": 1E-9
         },
         "legend": {
           "show": true
@@ -186,7 +185,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+            "uid": "smokeping-prometheus"
           },
           "disableTextWrap": false,
           "editorMode": "code",
@@ -209,142 +208,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
-      },
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              }
-            ]
-          },
-          "unitScale": true
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 31,
-        "w": 2,
-        "x": 21,
-        "y": 0
-      },
-      "id": 10,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "10.3.3",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
-          },
-          "editorMode": "code",
-          "expr": "smokeping_requests_total",
-          "instant": false,
-          "legendFormat": "{{ip}}",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "Requests",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 1
-              }
-            ]
-          },
-          "unitScale": true
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 31,
-        "w": 1,
-        "x": 23,
-        "y": 0
-      },
-      "id": 4,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "10.3.3",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
-          },
-          "editorMode": "code",
-          "expr": "smokeping_send_errors_total",
-          "instant": false,
-          "legendFormat": "{{ip}}",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "Errors",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+        "uid": "smokeping-prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -393,7 +257,7 @@
         "x": 14,
         "y": 12
       },
-      "id": 11,
+      "id": 3,
       "maxDataPoints": 100,
       "options": {
         "barRadius": 0,
@@ -422,7 +286,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+            "uid": "smokeping-prometheus"
           },
           "disableTextWrap": false,
           "editorMode": "builder",
@@ -438,7 +302,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+            "uid": "smokeping-prometheus"
           },
           "disableTextWrap": false,
           "editorMode": "builder",
@@ -477,9 +341,9 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+        "uid": "smokeping-prometheus"
       },
-      "description": "",
+      "description": "8.8.8.8",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -537,7 +401,7 @@
         "x": 0,
         "y": 16
       },
-      "id": 8,
+      "id": 4,
       "options": {
         "bucketOffset": 0,
         "combine": false,
@@ -553,7 +417,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+            "uid": "smokeping-prometheus"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -571,9 +435,9 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+        "uid": "smokeping-prometheus"
       },
-      "description": "",
+      "description": "8.8.8.8",
       "fieldConfig": {
         "defaults": {
           "custom": {
@@ -596,7 +460,7 @@
         "x": 14,
         "y": 16
       },
-      "id": 6,
+      "id": 5,
       "interval": "10s",
       "maxDataPoints": 100,
       "options": {
@@ -615,7 +479,7 @@
           "color": "rgba(255,0,255,0.7)"
         },
         "filterValues": {
-          "le": 1e-9
+          "le": 1E-9
         },
         "legend": {
           "show": true
@@ -638,7 +502,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+            "uid": "smokeping-prometheus"
           },
           "disableTextWrap": false,
           "editorMode": "code",
@@ -661,7 +525,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+        "uid": "smokeping-prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -710,7 +574,7 @@
         "x": 14,
         "y": 28
       },
-      "id": 12,
+      "id": 6,
       "maxDataPoints": 100,
       "options": {
         "barRadius": 0,
@@ -739,7 +603,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+            "uid": "smokeping-prometheus"
           },
           "disableTextWrap": false,
           "editorMode": "builder",
@@ -755,7 +619,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "cbca6b21-2ffc-4ebd-9120-697a3132026e"
+            "uid": "smokeping-prometheus"
           },
           "disableTextWrap": false,
           "editorMode": "builder",
@@ -790,6 +654,775 @@
         }
       ],
       "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "smokeping-prometheus"
+      },
+      "description": "192.168.11.1",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "fillOpacity": 50,
+            "gradientMode": "scheme",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "dark-orange",
+                "value": null
+              },
+              {
+                "color": "semi-dark-orange",
+                "value": 10
+              },
+              {
+                "color": "orange",
+                "value": 20
+              },
+              {
+                "color": "light-orange",
+                "value": 30
+              },
+              {
+                "color": "super-light-orange",
+                "value": 40
+              },
+              {
+                "color": "#ffffff",
+                "value": 50
+              }
+            ]
+          },
+          "unit": "none",
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 14,
+        "x": 0,
+        "y": 32
+      },
+      "id": 7,
+      "options": {
+        "bucketOffset": 0,
+        "combine": false,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        }
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "sum(increase(smokeping_response_duration_seconds_bucket{ip=\"192.168.11.1\"}[$__interval])) by (le)",
+          "format": "heatmap",
+          "instant": false,
+          "legendFormat": "{{le}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "SmokePing 192.168.11.1",
+      "type": "histogram"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "smokeping-prometheus"
+      },
+      "description": "192.168.11.1",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "scaleDistribution": {
+              "type": "linear"
+            }
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 7,
+        "x": 14,
+        "y": 32
+      },
+      "id": 8,
+      "interval": "10s",
+      "maxDataPoints": 100,
+      "options": {
+        "calculate": false,
+        "cellGap": 1,
+        "color": {
+          "exponent": 0.5,
+          "fill": "dark-orange",
+          "mode": "scheme",
+          "reverse": false,
+          "scale": "exponential",
+          "scheme": "Oranges",
+          "steps": 64
+        },
+        "exemplars": {
+          "color": "rgba(255,0,255,0.7)"
+        },
+        "filterValues": {
+          "le": 1E-9
+        },
+        "legend": {
+          "show": true
+        },
+        "rowsFrame": {
+          "layout": "le"
+        },
+        "tooltip": {
+          "mode": "single",
+          "showColorScale": false,
+          "yHistogram": false
+        },
+        "yAxis": {
+          "axisPlacement": "left",
+          "reverse": false
+        }
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "sum by(le) (increase(smokeping_response_duration_seconds_bucket{ip=\"192.168.11.1\"}[$__interval]))",
+          "format": "heatmap",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{le}}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "SmokePing 192.168.11.1",
+      "transformations": [],
+      "type": "heatmap"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "smokeping-prometheus"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": null
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 14,
+        "y": 44
+      },
+      "id": 9,
+      "maxDataPoints": 100,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "colorByField": "Time",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 200
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "increase(smokeping_response_duration_seconds_count{ip=\"192.168.11.1\"}[$__interval])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "Responses",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "increase(smokeping_requests_total{ip=\"192.168.11.1\"}[$__interval])",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "Requests",
+          "useBackend": false
+        }
+      ],
+      "title": "Dropped pings 192.168.11.1",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "A",
+              "operator": "-",
+              "right": "B"
+            },
+            "mode": "reduceRow",
+            "reduce": {
+              "include": [],
+              "reducer": "diff"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "smokeping-prometheus"
+      },
+      "description": "192.168.50.1",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "fillOpacity": 50,
+            "gradientMode": "scheme",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "dark-orange",
+                "value": null
+              },
+              {
+                "color": "semi-dark-orange",
+                "value": 10
+              },
+              {
+                "color": "orange",
+                "value": 20
+              },
+              {
+                "color": "light-orange",
+                "value": 30
+              },
+              {
+                "color": "super-light-orange",
+                "value": 40
+              },
+              {
+                "color": "#ffffff",
+                "value": 50
+              }
+            ]
+          },
+          "unit": "none",
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 14,
+        "x": 0,
+        "y": 48
+      },
+      "id": 10,
+      "options": {
+        "bucketOffset": 0,
+        "combine": false,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        }
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "sum(increase(smokeping_response_duration_seconds_bucket{ip=\"192.168.50.1\"}[$__interval])) by (le)",
+          "format": "heatmap",
+          "instant": false,
+          "legendFormat": "{{le}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "SmokePing 192.168.50.1",
+      "type": "histogram"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "smokeping-prometheus"
+      },
+      "description": "192.168.50.1",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "scaleDistribution": {
+              "type": "linear"
+            }
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 7,
+        "x": 14,
+        "y": 48
+      },
+      "id": 11,
+      "interval": "10s",
+      "maxDataPoints": 100,
+      "options": {
+        "calculate": false,
+        "cellGap": 1,
+        "color": {
+          "exponent": 0.5,
+          "fill": "dark-orange",
+          "mode": "scheme",
+          "reverse": false,
+          "scale": "exponential",
+          "scheme": "Oranges",
+          "steps": 64
+        },
+        "exemplars": {
+          "color": "rgba(255,0,255,0.7)"
+        },
+        "filterValues": {
+          "le": 1E-9
+        },
+        "legend": {
+          "show": true
+        },
+        "rowsFrame": {
+          "layout": "le"
+        },
+        "tooltip": {
+          "mode": "single",
+          "showColorScale": false,
+          "yHistogram": false
+        },
+        "yAxis": {
+          "axisPlacement": "left",
+          "reverse": false
+        }
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "sum by(le) (increase(smokeping_response_duration_seconds_bucket{ip=\"192.168.50.1\"}[$__interval]))",
+          "format": "heatmap",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{le}}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "SmokePing 192.168.50.1",
+      "transformations": [],
+      "type": "heatmap"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "smokeping-prometheus"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": null
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 14,
+        "y": 60
+      },
+      "id": 12,
+      "maxDataPoints": 100,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "colorByField": "Time",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 200
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "increase(smokeping_response_duration_seconds_count{ip=\"192.168.50.1\"}[$__interval])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "Responses",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "increase(smokeping_requests_total{ip=\"192.168.50.1\"}[$__interval])",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "Requests",
+          "useBackend": false
+        }
+      ],
+      "title": "Dropped pings 192.168.50.1",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "A",
+              "operator": "-",
+              "right": "B"
+            },
+            "mode": "reduceRow",
+            "reduce": {
+              "include": [],
+              "reducer": "diff"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "smokeping-prometheus"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 63,
+        "w": 2,
+        "x": 21,
+        "y": 0
+      },
+      "id": 1000,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "editorMode": "code",
+          "expr": "smokeping_requests_total",
+          "instant": false,
+          "legendFormat": "{{ip}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Requests",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "smokeping-prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 63,
+        "w": 1,
+        "x": 23,
+        "y": 0
+      },
+      "id": 1001,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "smokeping-prometheus"
+          },
+          "editorMode": "code",
+          "expr": "smokeping_send_errors_total",
+          "instant": false,
+          "legendFormat": "{{ip}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Errors",
+      "type": "stat"
     }
   ],
   "refresh": false,
@@ -805,7 +1438,7 @@
   "timepicker": {},
   "timezone": "",
   "title": "SmokePing",
-  "uid": "ed8e1904-1e53-490d-9847-8bf1687bb78a",
-  "version": 15,
+  "uid": "smokeping-dashboard",
+  "version": 1,
   "weekStart": ""
 }
